@@ -1,89 +1,112 @@
-/* Color and Font Variables */
+/* =======================================
+   1. COLOR SCHEME & TYPOGRAPHY VARIABLES 
+   ======================================= */
 :root {
-  --primary-color: #055a05; /* Change to your primary color */
-  --secondary-color: #f4a261; /* Change to your secondary color */
-  --accent1-color: #264653; /* Change to your accent color */
-  --accent2-color: #e9c46a; /* Change to your secondary accent */
+  --primary-color: #055a05;      /* Forest Green */
+  --secondary-color: #f4a261;    /* Warm Sand */
+  --accent1-color: #264653;      /* Dark Slate Blue */
+  --accent2-color: #e9c46a;      /* Light Golden Yellow */
   --heading-font: "Times New Roman", "Georgia", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Global Box-Model Reset */
+/* =======================================
+   2. GLOBAL RESET & SITE LAYOUT
+   ======================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   font-family: var(--body-font);
-  color: var(--accent1-color);
+  color: var(--accent1-color);  /* USED HERE */
+  background-color: #fafafa;
 }
 
-/* Center Content & Limit Page Width */
 header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 
-/* Typography */
 h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+  font-family: var(--heading-font); /* USED HERE */
+  color: var(--primary-color);     /* USED HERE */
 }
 
-/* Spacing Setup */
 nav, p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-/* Remove Footer Underlines on Icon Links */
 .socialmedia a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* =======================================
-   HERO DIV WITH ABSOLUTE OVERLAYS 
+   3. HERO BANNER OVERLAYS 
    ======================================= */
-
 .hero {
   position: relative;
 }
 
-/* Makes the background hero image stretch fully */
 .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-/* Positions the H1 Title over the Image */
-h1 {
+.hero h1 {
   position: absolute;
   top: 20px;
+  left: 0;
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
-  color: #fff; 
+  /* USED ACCENT1 HERE */
+  background-color: var(--accent1-color); 
+  /* USED ACCENT2 FOR TEXT CONTRAST HERE */
+  color: var(--accent2-color); 
 }
 
-/* Positions the text block over the bottom of the image */
 .hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
   right: 20px;
-  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 0.88); 
+  /* USED SECONDARY COLOR FOR A DESIGN BORDER HERE */
+  border-left: 5px solid var(--secondary-color); 
   padding: 20px;
+  margin: 0;
 }
 
-/* Floats the small client/employee image to the right inside the article box */
 .hero article img {
   float: right;
   width: 125px;
+  height: auto;
   margin-left: 15px;
+}
+
+/* =======================================
+   4. PRIMARY NAVIGATION STYLING
+   ======================================= */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: var(--body-font);
+  font-weight: bold;
+}
+
+header nav a:hover {
+  /* USED SECONDARY COLOR ON HOVER STYLING HERE */
+  color: var(--secondary-color);
 }
