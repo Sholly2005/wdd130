@@ -1,1 +1,89 @@
+/* Color and Font Variables */
+:root {
+  --primary-color: #055a05; /* Change to your primary color */
+  --secondary-color: #f4a261; /* Change to your secondary color */
+  --accent1-color: #264653; /* Change to your accent color */
+  --accent2-color: #e9c46a; /* Change to your secondary accent */
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
 
+/* Global Box-Model Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+}
+
+/* Center Content & Limit Page Width */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Spacing Setup */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Remove Footer Underlines on Icon Links */
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* =======================================
+   HERO DIV WITH ABSOLUTE OVERLAYS 
+   ======================================= */
+
+.hero {
+  position: relative;
+}
+
+/* Makes the background hero image stretch fully */
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Positions the H1 Title over the Image */
+h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff; 
+}
+
+/* Positions the text block over the bottom of the image */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+  padding: 20px;
+}
+
+/* Floats the small client/employee image to the right inside the article box */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 15px;
+}
