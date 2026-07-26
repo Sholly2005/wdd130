@@ -7,7 +7,7 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,7 +31,7 @@ h1, h2 {
   margin-bottom: 15px;
 }
 
-/* ================= 2. HEADER (CSS Grid) ================= */
+/* ================= HEADER (CSS Grid) ================= */
 header {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -46,7 +46,7 @@ header .logo {
   justify-self: start;
 }
 
-/* ================= 3. NAVIGATION (CSS Flex) ================= */
+/* ================= NAVIGATION (CSS Flex) ================= */
 header nav ul {
   list-style: none;
   display: flex;
@@ -90,7 +90,7 @@ header nav li a:hover {
   width: 100%;
   padding: 12px;
   text-align: center;
-  background-color: rgba(38, 70, 83, 0.75); 
+  background-color: rgba(38, 70, 83, 0.85); 
   color: var(--accent2-color); 
 }
 
@@ -99,7 +99,7 @@ header nav li a:hover {
   bottom: 15px;
   left: 15px;
   right: 15px;
-  background-color: rgba(255, 255, 255, 0.9); 
+  background-color: rgba(255, 255, 255, 0.92); 
   border: 1px solid #ccc;
   padding: 15px;
   margin: 0;
@@ -116,7 +116,7 @@ header nav li a:hover {
   margin-left: 15px;
 }
 
-/* ================= 4. HISTORY SECTION (Wireframe Alignment) ================= */
+/* ================= HISTORY SECTION ================= */
 .history {
   margin: 20px 0;
   padding: 15px;
@@ -138,7 +138,7 @@ header nav li a:hover {
   border: 1px solid #ddd;
 }
 
-/* ================= 4. ADVENTURES SECTION ================= */
+/* ================= ADVENTURES SECTION ================= */
 .adventures {
   margin: 20px 0;
   padding: 15px;
@@ -172,7 +172,7 @@ figcaption {
   color: #333;
 }
 
-/* ================= 5. FOOTER ================= */
+/* ================= FOOTER ================= */
 footer {
   display: flex;
   justify-content: space-between;
@@ -192,6 +192,10 @@ footer .socialmedia {
   gap: 10px;
   margin: 0;
   padding: 0;
+}
+
+.socialmedia a {
+  text-decoration: none;
 }
 
 footer .socialmedia img {
