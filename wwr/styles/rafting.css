@@ -1,206 +1,163 @@
-:root {
-  --primary-color: #055a05;
-  --secondary-color: #f4a261;
-  --accent1-color: #264653;
-  --accent2-color: #e9c46a;
-  --heading-font: "Times New Roman", "Georgia", serif;
-  --body-font: Arial, Helvetica, sans-serif;
-}
-
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--body-font);
-  color: var(--accent1-color);
-  background-color: #fafafa;
-}
-
-header, main, footer {
-  width: 840px;
-  margin: 0 auto;
-}
-
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+/* Company Info Header */
+.company-info {
   text-align: center;
-  margin-bottom: 15px;
+  margin: 25px 0 20px 0;
 }
 
-/* ================= HEADER (CSS Grid) ================= */
-header {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 2px solid #ccc;
+.company-info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
 }
 
-header .logo {
-  max-width: 120px;
-  height: auto;
-  justify-self: start;
-}
-
-/* ================= NAVIGATION (CSS Flex) ================= */
-header nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-}
-
-header nav li a {
-  text-decoration: none;
+.company-info address {
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.4;
   color: #333;
-  font-weight: bold;
-  padding: 8px 16px;
-  border: 1px solid #777;
-  background-color: #fff;
-  display: block;
 }
 
-header nav li a:hover {
+.company-info address a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Map & Form Side-by-Side Container */
+.map-form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+/* Map Styling without Inline Attributes */
+.map-wrapper iframe {
+  width: 100%;
+  height: 340px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+/* Form Layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
+
+.form-row label,
+.form-row .label-heading {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Inputs, Textarea Layout */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #777;
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  background-color: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Radio Buttons Group */
+.radio-group {
+  align-items: start;
+}
+
+.radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.radio-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* Checkbox Row */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.checkbox-row label {
+  font-size: 0.85rem;
+}
+
+/* Get in Touch Button */
+.submit-btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #eee;
+  color: #333;
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
   background-color: var(--secondary-color);
   color: #fff;
 }
 
-/* ================= HERO SECTION ================= */
-.hero {
-  position: relative;
-  margin-top: 10px;
+/* Employee Team Profiles Section */
+.team-section {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.hero h1 {
-  position: absolute;
-  top: 15px;
-  left: 0;
-  width: 100%;
-  padding: 12px;
+.team-section h2 {
   text-align: center;
-  background-color: rgba(38, 70, 83, 0.85); 
-  color: var(--accent2-color); 
+  font-size: 1.4rem;
+  margin-bottom: 20px;
 }
 
-.hero article {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
-  background-color: rgba(255, 255, 255, 0.92); 
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin: 0;
-}
-
-.hero article h2 {
-  text-align: left;
-}
-
-.hero article img {
-  float: right;
-  width: 100px;
-  height: auto;
-  margin-left: 15px;
-}
-
-/* ================= HISTORY SECTION ================= */
-.history {
-  margin: 20px 0;
-  padding: 15px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-.history-grid {
-  display: grid;
-  grid-template-columns: 1fr 200px 1fr;
-  gap: 15px;
-  align-items: center;
-}
-
-.history-grid img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border: 1px solid #ddd;
-}
-
-/* ================= ADVENTURES SECTION ================= */
-.adventures {
-  margin: 20px 0;
-  padding: 15px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-.adventures-grid {
+.team-grid {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-figure {
-  flex: 1;
+.team-grid figure {
   text-align: center;
-  margin: 0;
 }
 
-figure img {
-  width: 100%;
-  height: 100px;
+.team-grid figure img {
+  width: 140px;
+  height: 110px;
   object-fit: cover;
+  background-color: #ddd;
   border: 1px solid #ccc;
-  background-color: #eee;
 }
 
-figcaption {
+.team-grid figcaption {
+  margin-top: 8px;
   font-size: 0.85rem;
-  margin-top: 5px;
   color: #333;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 10px;
-  border-top: 2px solid #ccc;
-  margin-top: 20px;
-}
-
-footer p {
-  margin: 0;
-  padding: 0;
-}
-
-footer .socialmedia {
-  display: flex;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-}
-
-.socialmedia a {
-  text-decoration: none;
-}
-
-footer .socialmedia img {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #000;
-  padding: 2px;
 }
